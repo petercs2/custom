@@ -11,8 +11,8 @@ class ClockConfigView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.carter.value
-              ? const CircularProgressIndicator(color: Colors.deepPurpleAccent)
+          () => controller.beer.value
+              ? const CircularProgressIndicator(color: Colors.white)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class ClockConfigView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.sipmlk();
+              controller.nxfcp();
             },
             icon: const Icon(
               Icons.restart_alt,

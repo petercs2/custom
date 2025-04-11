@@ -1,5 +1,8 @@
+import 'package:custom_clock/pages/clock_config/clock_config_binding.dart';
+import 'package:custom_clock/pages/clock_config/clock_config_view.dart';
 import 'package:custom_clock/pages/clock_main/clock_main_binding.dart';
 import 'package:custom_clock/pages/clock_main/clock_main_view.dart';
+import 'package:custom_clock/pages/clock_setting/clock_list.dart';
 import 'package:custom_clock/pages/clock_setting/clock_setting_binding.dart';
 import 'package:custom_clock/pages/clock_setting/clock_setting_view.dart';
 import 'package:custom_clock/pages/not_found/not_found_binding.dart';
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: jioays,
-      initialRoute: '/clockMain',
+      initialRoute: '/clockInit',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -89,7 +92,9 @@ class MyApp extends StatelessWidget {
 }
 
 List<GetPage<dynamic>> jioays = [
+  GetPage(name: '/clockInit', page: () => const ClockConfigView(), binding: ClockConfigBinding()),
   GetPage(name: '/clockMain', page: () => const ClockMainPage(), binding: ClockMainBinding()),
   GetPage(name: '/clockSetting', page: () => const ClockSettingPage(), binding: ClockSettingBinding()),
+  GetPage(name: '/clockClean', page: () => const ClockList()),
   GetPage(name: '/notFound', page: () => const NotFoundPage(), binding: NotFoundBinding()),
 ];
