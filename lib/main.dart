@@ -18,7 +18,9 @@ List<Color> colorList = [
   const Color(0xffff0000),
   const Color(0xff74f7d6),
   const Color(0xff007fff),
-  const Color(0xffffec5a)
+  const Color(0xffffec5a),
+  const Color(0xFF14FF00),
+  const Color(0xFFFFFFFF),
 ];
 
 void main() async {

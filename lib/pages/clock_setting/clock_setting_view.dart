@@ -66,7 +66,7 @@ class ClockSettingPage extends GetView<ClockSettingLogic> {
                                 mainAxisSpacing: 10,
                                 crossAxisSpacing: 10,
                                 childAspectRatio: 151 / 55),
-                        itemCount: 4,
+                        itemCount: 6,
                         itemBuilder: (_, index) {
                           return ClockItem(controller.type, index, (v) {
                             controller.type = v;
